@@ -3,6 +3,8 @@
 
 #include "utils.h"
 
+extern char printbuf[];
+
 const int buf_size = 8;
 
 void *data;
@@ -22,7 +24,8 @@ size_t data_preprocess(void *data, size_t len) {
 }
 
 int part1(void *data, size_t len, int *calorie_totals) {
-    printf("----- Part 1 -----\n");
+    snprintf(printbuf, PAGE, "----- Part 1 -----\n");
+    printf("%s", printbuf);
     size_t idx = 0, cur_entry = 0;
     int max = 0;
     while (idx < len) {
@@ -39,12 +42,14 @@ int part1(void *data, size_t len, int *calorie_totals) {
             calorie_totals[cur_entry] += atoi(line);
         }
     }
-    printf("The highest number of calories is %d.\n", max);
+    snprintf(printbuf, PAGE, "The highest number of calories is %d.\n", max);
+    printf("%s", printbuf);
     return 0;
 }
 
 int part2(int *calorie_totals, size_t n_entries) {
-    printf("----- Part 2 -----\n");
+    snprintf(printbuf, PAGE, "----- Part 2 -----\n");
+    printf("%s", printbuf);
     int top1 = 0, top2 = 0, top3 = 0, sum = 0;
 
     for (int i = 0; i < n_entries; i++) {
@@ -67,8 +72,10 @@ int part2(int *calorie_totals, size_t n_entries) {
     }
 
     sum = top1 + top2 + top3;
-    printf("The top 3 calorie totals are %d, %d, and %d.\n", top1, top2, top3);
-    printf("Their sum is %d.\n", sum);
+    snprintf(printbuf, PAGE, "The top 3 calorie totals are %d, %d, and %d.\n", top1, top2, top3);
+    printf("%s", printbuf);
+    snprintf(printbuf, PAGE, "Their sum is %d.\n", sum);
+    printf("%s", printbuf);
     return 0;
 }
 

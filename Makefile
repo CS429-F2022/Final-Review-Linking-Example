@@ -33,5 +33,16 @@ objdumps: utils.o calories.o runner
 	objdump -t calories.o > calories_symtab.od
 	objdump -t runner > runner_symtab.od
 
+	# relocation records
+	objdump -r utils.o > utils_rel.od
+	objdump -r calories.o > calories_rel.od
+	objdump -r runner > runner_rel.od
+
+	# dynamic symbols
+	objdump -T runner > runner_dynamic_symtab.od
+
+	# dynamic relocation records
+	objdump -R runner > runner_dynamic_rel.od
+
 clean:
 	rm runner *.o *.od
