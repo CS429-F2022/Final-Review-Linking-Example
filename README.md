@@ -47,7 +47,8 @@ Once you're done, we'll reconvene and discuss the answers.
 # Activity 2 - Relocation Records
 
 This section takes a look at symbol relocation.
-We want to see how symbols changed
+We want to see how symbols changed between their original compilation in `calories.o` and `runner`.
+For this section onward, you're fine to use the generated objdump files, as you'll need them to get your answers.
 
 For the same symbols as before, answer these questions:
 - Does it have a relocation record attached/will references to it require patching?
