@@ -11,7 +11,7 @@ all_static: static objdumps
 
 runner: utils.o
 	$(CC) $(CC_FLAGS) -o runner calories.c $(DEPS)
-	./runner data.txt
+	./runner input.txt
 
 debug: utils.o
 	$(CC) $(DEBUG_FLAGS) -o runner calories.c $(DEPS)

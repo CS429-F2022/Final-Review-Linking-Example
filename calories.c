@@ -6,7 +6,7 @@
 const int buf_size = 8;
 
 void *data;
-size_t len;
+size_t len = 0;
 
 size_t data_preprocess(void *data, size_t len) {
     size_t idx = 0, n_entries = 0;
