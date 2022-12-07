@@ -41,6 +41,7 @@ For each of the following symbols in `calories.c`, answer these questions:
 6. part1
 7. read_data
 8. atoi
+9. page_size
 
 Once you're done, we'll reconvene and discuss the answers.
 
@@ -62,6 +63,7 @@ For the same symbols as before, answer these questions:
 6. part1
 7. read_data
 8. atoi
+9. page_size
 
 Once you're done, we'll meet up and discuss again.
 
